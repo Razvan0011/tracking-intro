@@ -1,0 +1,197 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root {
+    /* Primary */
+    --red: hsl(0, 100%, 68%);
+
+    /* Neutral */
+    --very-dark-blue: hsl(230, 29%, 20%);
+    --dark-grayish-blue: hsl(230, 11%, 40%);
+    --grayish-blue: hsl(231, 7%, 65%);
+    --light-grayish-blue: hsl(207, 33%, 95%);
+}
+
+/* Headings, Call-to-actions, Navigation font-family: 'Barlow Condensed', sans-serif; */
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    font-family: 'Barlow', sans-serif;
+    font-size: 18px;
+    position: relative;
+    height: 100%;
+    overflow: hidden;
+}
+
+#navbar {
+    position: fixed;
+    /* background-color: red; */
+    top: 70px;
+    width: 100%;
+    margin: auto;
+}
+#nav {
+    /* background-color: royalblue; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+ul {
+    list-style: none;
+    display: flex;
+}
+ul li {margin: 0 18px; }
+ul li:last-child {margin-right: 0;}
+ul li a {
+    text-decoration: none;
+    font-family: 'Barlow Condensed', sans-serif;
+    text-transform: uppercase;
+    color: var(--very-dark-blue);
+    font-weight: 700;
+}
+ul li:last-child a, ul li:nth-child(4) a{
+    color: var(--grayish-blue);
+}
+/* List hover state */
+ul li a:hover {
+    text-decoration: underline;
+}
+
+ul li:nth-child(4) a:hover {
+    text-decoration: none;
+    cursor: default;
+}
+ul li:nth-child(4):hover {
+    cursor: default;
+}
+
+/* Main div */
+.main {
+    z-index: 1;
+}
+
+/* First/Top line */
+.top-line {
+    display: flex;
+    font-family: 'Barlow Condensed', sans-serif;
+    text-transform: uppercase;
+}
+/* "NEW" Div */
+.new {
+    background: var(--very-dark-blue);
+    padding: 3px 11px;
+    border-radius: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#mono {
+    color: var(--grayish-blue);
+    font-weight: 400;
+    letter-spacing: 5px;
+    margin-left: 20px;
+    
+}
+
+.new h3 {
+    text-align: center;
+    letter-spacing: 1px;
+    font-weight: 600;
+    margin-top: -1px;
+    font-size: 18px;
+    color: white;
+}
+
+/* Heading */
+.main h1 {
+    font-family: 'Barlow Condensed', sans-serif;
+    color: var(--very-dark-blue);
+    text-transform: uppercase;
+    font-size: 65px;
+    line-height: 65px;
+    margin-top: 20px;
+    margin-bottom: 40px;
+}
+
+.main p {
+    color: var(--dark-grayish-blue);
+    font-size: 20px;
+    line-height: 25px;
+    font-weight: 400;
+    width: 55%;
+}
+
+/* Bottom Line */
+.bottom-line {
+    display: flex;
+    align-items: center;
+    font-family: 'Barlow Condensed', sans-serif;
+    text-transform: uppercase;
+    color: var(--grayish-blue);
+    margin-top: 70px;
+}
+
+/* Red button */
+.red-btn {
+    color: white;
+    background: var(--red);
+    padding: 16px 32px;
+    border-radius: 6px;
+}
+.red-btn h3 {
+    font-weight: 500;
+    letter-spacing: 1px;
+}
+
+.red-btn:hover {
+    cursor: pointer;
+    opacity: 0.8;
+}
+
+/* Desktop */
+@media screen and (min-width: 860px) {
+    .mobile {
+        display: none;
+    }
+
+    .container {
+        max-width: 1100px;
+        margin: auto;
+    }
+
+    .gray-bg {
+        display: inline-block;
+        width: 50%;
+        height: 50%;
+        background: var(--light-grayish-blue);
+        margin-left: 50%;
+        border-radius: 0 0 0 70px;
+        z-index: 0;
+    }
+    #devices {
+        position: fixed;
+        right: -180px;
+        top: 250px;
+        width: 60%;
+        /* height: 50%; */
+    }
+
+    .main {
+        width: 50%;
+        transform: translateY(-50%);
+    }
+}
+
+/* Small devices */
+@media screen and (max-width: 860px) {
+    .desktop {
+        display: none;
+    }
+}
