@@ -14,7 +14,7 @@
     <!-- Navbar -->
     <div id="navbar">
         <div class="container" id="nav">
-            <img src="./img/logo.svg" alt="">
+            <img src="./img/logo.svg" id="logo">
             <ul class="desktop">
                 <li><a href="#">product</a></li>
                 <li><a href="#">features</a></li>
@@ -22,7 +22,8 @@
                 <li><a href="#">&bull;</a></li>
                 <li><a href="#">login</a></li>
             </ul>
-            <img src="./img/icon-hamburger.svg" class="mobile">
+            <img src="./img/icon-close.svg" class="mobile hide" id="close">
+            <img src="./img/icon-hamburger.svg" class="mobile" id="burger">
         </div>
     </div>
 
@@ -55,6 +56,21 @@
             </div>
         </div>
     </div>
+
+    <!-- Mobile menu -->
+    <div class="container mobile hide" id="menu">
+        <ul>
+            <li><a href="#">product</a></li>
+            <li><a href="#">features</a></li>
+            <li><a href="#">pricing</a></li>
+            <li>
+                <div></div>
+            </li>
+            <li><a href="#">login</a></li>
+        </ul>
+    </div>
+
+    <script src="./script.js"></script>
 </body>
 
 </html>
